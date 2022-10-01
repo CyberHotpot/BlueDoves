@@ -1,6 +1,6 @@
 # Project 3 - BlueDoves
 
-BlueDoves is a basic twitter app to read your tweets.
+**BlueDoves** is a basic twitter app to read your tweets.
 
 Time spent: **6** hours spent in total
 
@@ -22,6 +22,8 @@ The following **bonus** features are implemented:
 ## Video Walkthrough
 
 Here's a walkthrough of implemented user stories:
+(The feature "User stays logged in across restarts" can be seen from the fact that I was not asked to log in when I opened the App.)
 
-<img src='http://i.imgur.com/link/to/your/gif/file.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+![](https://i.imgur.com/q1m2RCP.gif)
+
 
