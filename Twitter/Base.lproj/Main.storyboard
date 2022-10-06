@@ -177,12 +177,23 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="280" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rTm-zO-mja">
+                                <rect key="frame" x="300" y="269" width="35" height="20.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="35" id="InG-E7-HWF"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.1137254902" green="0.63137254899999995" blue="0.94901960780000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="SsG-A5-3JL"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstAttribute="trailing" secondItem="rTm-zO-mja" secondAttribute="trailing" constant="40" id="3uX-D4-Cr4"/>
                             <constraint firstItem="ZQI-vY-89k" firstAttribute="leading" secondItem="SsG-A5-3JL" secondAttribute="leading" id="edc-iX-R44"/>
                             <constraint firstItem="SsG-A5-3JL" firstAttribute="trailing" secondItem="ZQI-vY-89k" secondAttribute="trailing" id="kJk-oN-9as"/>
+                            <constraint firstItem="rTm-zO-mja" firstAttribute="top" secondItem="ZQI-vY-89k" secondAttribute="bottom" constant="25" id="mFv-UY-xsJ"/>
                             <constraint firstItem="ZQI-vY-89k" firstAttribute="top" secondItem="SsG-A5-3JL" secondAttribute="top" id="oCY-Fq-4v1"/>
                         </constraints>
                     </view>
@@ -201,12 +212,13 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="countLabel" destination="rTm-zO-mja" id="k4d-jl-yeF"/>
                         <outlet property="tweetTextView" destination="ZQI-vY-89k" id="609-Ua-lbD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cM3-ab-kuL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3113" y="136"/>
+            <point key="canvasLocation" x="3112.8000000000002" y="135.38230884557723"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="MG9-os-dH1">
