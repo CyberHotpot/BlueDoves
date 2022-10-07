@@ -100,8 +100,12 @@ class HomeTableViewController: UITableViewController {
             print(Error.localizedDescription)
         })
     }
+    /*
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        <#code#>
+    }
 
-
+*/
     
 
 }

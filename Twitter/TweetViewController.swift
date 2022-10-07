@@ -9,7 +9,7 @@
 import UIKit
 
 class TweetViewController: UIViewController, UITextViewDelegate {
-
+    
     @IBOutlet weak var countLabel: UILabel!
     @IBOutlet weak var tweetTextView: UITextView!
     @IBAction func cancel(_ sender: Any) {
@@ -20,7 +20,6 @@ class TweetViewController: UIViewController, UITextViewDelegate {
         super.viewDidLoad()
         tweetTextView.becomeFirstResponder()
         tweetTextView.delegate = self
-        
     }
     
     @IBAction func tweet(_ sender: Any) {
@@ -43,7 +42,7 @@ class TweetViewController: UIViewController, UITextViewDelegate {
         
 
         // TODO: Update Character Count Label
-        countLabel.text="\(newText.count)"
+        countLabel.text="\(characterLimit-newText.count)"
         if(newText.count>260){
             countLabel.textColor=UIColor.red
         }else{
