@@ -14,6 +14,7 @@ class ProfileViewController: UIViewController {
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var screenLabel: UILabel!
     
+    @IBOutlet weak var bannerView: UIImageView!
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var bioLabel: UILabel!
     @IBOutlet weak var tweetsLabel: UILabel!
@@ -22,8 +23,13 @@ class ProfileViewController: UIViewController {
     @IBOutlet weak var followingLabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
+        imageView.layer.cornerRadius=imageView.frame.size.width/2
+        imageView.layer.masksToBounds=true
+        imageView.layer.borderWidth=5.0
+        imageView.layer.borderColor=UIColor.white.cgColor
+        
         getId()
-        print(tweetId)
+        //print(tweetId)
         /*
         if(tweetId != ""){
             print("test")
@@ -73,19 +79,12 @@ class ProfileViewController: UIViewController {
         
     }
     
-    /*
-    // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
+   
     
     func updateLabel(){
         nameLabel.text=userObject["name"] as! String
-        screenLabel.text=userObject["screen_name"] as! String
+        screenLabel.text="@\(userObject["screen_name"] as! String)"
         tweetsLabel.text="\(userObject["statuses_count"] as! Int) Tweets"
         followingLabel.text="\(userObject["friends_count"] as! Int) Followers"
         followersLabel.text="\(userObject["followers_count"] as! Int) Followers"
@@ -96,6 +95,13 @@ class ProfileViewController: UIViewController {
         if let imageData=data{
             imageView.image=UIImage(data: imageData)
         }
+        
+        let bannerUrl=URL(string:(userObject["profile_banner_url"] as? String)!)
+        let data2=try?Data(contentsOf: bannerUrl!)
+        if let bannerData=data2{
+            bannerView.image=UIImage(data: bannerData)
+        }
+        
     }
 
 }
