@@ -23,8 +23,9 @@ The following **bonus** features are implemented:
 ## Video Walkthrough
 
 Here's a walkthrough of implemented user stories:
-//Required features: https://i.imgur.com/7L6KdXq.gif
-//Bonus Feature 1&2: https://i.imgur.com/aibXwx2.gif
+Required features: https://i.imgur.com/7L6KdXq.gif
+Bonus Feature 1&2: https://i.imgur.com/aibXwx2.gif
+
 ![](https://i.imgur.com/VAwvhPy.gif)
 
 
