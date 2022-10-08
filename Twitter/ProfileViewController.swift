@@ -67,21 +67,8 @@ class ProfileViewController: UIViewController {
             print("Could not retreive tweets")
             print(Error.localizedDescription)
         })
-        //print(self.userObject)
-        /*
-        nameLabel.text=userObject["name"] as! String
-        screenLabel.text=userObject["screen_name"] as! String
-        tweetsLabel.text="\(userObject["statuses_count"] as! Int) Tweets"
-        followingLabel.text="\(userObject["friends_count"] as! Int) Followers"
-        followersLabel.text="\(userObject["followers_count"] as! Int) Followers"
-        followingLabel.text="\(userObject["friends_count"] as! Int) Following"
-      */
         
     }
-    
-
-   
-    
     func updateLabel(){
         nameLabel.text=userObject["name"] as! String
         screenLabel.text="@\(userObject["screen_name"] as! String)"

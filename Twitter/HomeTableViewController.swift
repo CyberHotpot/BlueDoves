@@ -43,8 +43,25 @@ class HomeTableViewController: UITableViewController {
         if let imageData=data{
             cell.profileImage.image=UIImage(data: imageData)
         }
+        
+        let entities=tweetArray[indexPath.row]["entities"] as! NSDictionary
+        //print(entities)
+        
+        if (entities["media"] != nil){
+            let media=entities["media"] as! [NSDictionary]
+            let mediaUrl=URL(string:(media[0]["media_url_https"] as? String)!)
+            let mata=try?Data(contentsOf: mediaUrl!)
+            if let imgData=mata{
+                
+                cell.imgHeight.isActive=true
+                cell.imgView.image=UIImage(data: imgData)
+            }
+        }else{
+            cell.imgHeight.isActive=false
+        }
+    
+        
         cell.setFavorite(tweetArray[indexPath.row]["favorited"] as! Bool)
-        //cell.retweeted=tweetArray[indexPath.row]["retweeted"] as! Bool
         cell.setRetweeted(tweetArray[indexPath.row]["retweeted"] as! Bool)
         cell.tweetId=tweetArray[indexPath.row]["id"] as! Int
         return cell
@@ -100,12 +117,6 @@ class HomeTableViewController: UITableViewController {
             print(Error.localizedDescription)
         })
     }
-    /*
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        <#code#>
-    }
-
-*/
     
 
 }
